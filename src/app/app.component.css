@@ -1,0 +1,57 @@
+html {
+    background-color: #89c2d9;
+    
+}
+
+body {
+
+}
+
+.keyboard {
+    align-self: center;
+    margin-top: 15px;
+}
+
+.keyNumeric {
+    display: flex;
+    justify-content: center;
+    
+}
+
+.keyLetter {
+    margin-bottom: 15px;
+    display: flex;
+    justify-content: center;
+    
+
+}
+
+.key {
+    font-family: 'Cabin', sans-serif;
+    height: 80px;
+    width: 80px;
+    font-size: 20pt;
+}
+
+
+.backspace {
+    font-family: 'Cabin', sans-serif;
+    height: 80px;
+    width: 80px;
+    font-size: 20pt;
+}
+
+.deleteAll {
+    font-family: 'Cabin', sans-serif;
+    height: 80px;
+    width: 80px;
+    font-size: 20pt;
+}
+
+.inputbox {
+    font-family: 'Cabin', sans-serif;
+    width: 472px;
+    margin: auto;
+    display: flex;
+    font-size: 20pt;
+}
