@@ -17,54 +17,59 @@
 
 
   <div class="input">
-    <input class="inputbox" type="text" [formControl]="inputForm" id="inputbox">
+    <input data-cy="input" class="inputbox" name="inputbox" type="text" id="inputbox" [(ngModel)]="inputNumber" [formControl]="inputForm" minlength="8" maxlength="8">
   </div>
   <div class="keyboard">
 
     <div class="keyLetter">
-      <button class="key" (click)="keyPress('A')">A</button>
-      <button class="key" (click)="keyPress('B')">B</button>
-      <button class="key" (click)="keyPress('C')">C</button>
-      <button class="key" (click)="keyPress('D')">D</button>
-      <button class="key" (click)="keyPress('E')">E</button>
-      <button class="key" (click)="keyPress('F')">F</button>
+      <button class="key" id="A" (click)="keyPress('A')">A</button>
+      <button class="key" id="B" (click)="keyPress('B')">B</button>
+      <button class="key" id="C" (click)="keyPress('C')">C</button>
+      <button class="key" id="D" (click)="keyPress('D')">D</button>
+      <button class="key" id="E" (click)="keyPress('E')">E</button>
+      <button class="key" id="F" (click)="keyPress('F')">F</button>
     </div>
 
 
     <div class="keyNumeric">
-      <button class="key" (click)="keyPress('1')">1</button>
-      <button class="key" (click)="keyPress('2')">2</button>
-      <button class="key" (click)="keyPress('3')">3</button>
+      <button class="key" id="1" (click)="keyPress('1')">1</button>
+      <button class="key" id="2" (click)="keyPress('2')">2</button>
+      <button class="key" id="3" (click)="keyPress('3')">3</button>
     </div>
 
     <div class="keyNumeric">
-      <button class="key" (click)="keyPress('4')">4</button>
-      <button class="key" (click)="keyPress('5')">5</button>
-      <button class="key" (click)="keyPress('6')">6</button>
+      <button class="key" id="4" (click)="keyPress('4')">4</button>
+      <button class="key" id="5" (click)="keyPress('5')">5</button>
+      <button class="key" id="6" (click)="keyPress('6')">6</button>
     </div>
 
     <div class="keyNumeric">
-      <button class="key" (click)="keyPress('7')">7</button>
-      <button class="key" (click)="keyPress('8')">8</button>
-      <button class="key" (click)="keyPress('9')">9</button>
+      <button class="key" id="7" (click)="keyPress('7')">7</button>
+      <button class="key" id="8" (click)="keyPress('8')">8</button>
+      <button class="key" id="9" (click)="keyPress('9')">9</button>
     </div>
 
     <div class="keyNumeric">
-      <button class="backspace" (click)="backspace()"><span class="material-icons">chevron_left</span></button>
-      <button class="key" (click)="keyPress('0')">0</button>
-      <button class="deleteAll" (click)="deleteAll()"><span class="material-icons">close</span></button>
+      <button class="backspace" id="backspace" (click)="backspace()"><span class="material-icons">chevron_left</span></button>
+      <button class="key" id="0" (click)="keyPress('0')">0</button>
+      <button class="clear" id="clear" (click)="clear()"><span class="material-icons">close</span></button>
     </div>
 
-  
+    <div class="submit">
+      <button [disabled]="inputNumber.length <= 7" class="submitButton" (click)="submit()">Submit <span class="material-icons">arrow_forward</span></button>
+    </div>
     
 
-    
+    <div class="cardNumber">
+      <p id="cardNumber">Enter Card Number</p>
+    </div>
     
     
 
 
 
   </div>
+
 </body>
 
 
