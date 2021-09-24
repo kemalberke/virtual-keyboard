@@ -3,13 +3,15 @@ describe('All buttons', () => {
 
     let testString = '';
     let testValue = '';
+    const buttons = 'ABCDEF1234567890'
+    
     cy.visit('')
     cy.get('.key').click({ multiple: true });
     cy.document().then((doc) => {
       testValue = doc.getElementById('inputbox').value;
       cy.get('.inputbox').should('have.value', testValue);    
     });
-    cy.get('.deleteAll').click();
+    cy.get('.clear').click();
 
     for (let i = 0; i < 4; i++) {
       cy.get('.keyLetter').click();
